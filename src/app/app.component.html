@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" [ngStyle]="{color : couleur}">
+  <h1>
+    Welcome to {{ title }}! <!--interpolation-->
+  </h1>
+  <p>{{ getDescription() }}</p> <!--appel de fonction-->
+
+</div>
+
+  <div>
+    <h2>{{ user.name }}</h2> <!--appel d'attribut de l'objet user-->
+    <p>{{ user.age }}</p>
+    <p>Birthday : {{ user.birthday | date : 'dd/MM/yyyy' }}</p> <!--interpolation avec pipe-->
+  </div>
+
+  
+  <button (click) = "changeTitle()">Change title</button>
+
+  <button (click) ="changeColor()" >Change Text color</button>
+
+  <select (change)="changeCouleur($event)">
+    <option value ='black'>noir</option>
+    <option value ='red'>rouge</option>
+    <option value ='blue'>bleu</option>
+  </select>
+
+  <input type="text" (change)="logValeur($event)">
+
+  <input type ="checkbox" (change) ="logCheckBox($event)" value='1'>
+  
+
+
+ 
+
+
+
